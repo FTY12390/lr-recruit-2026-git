@@ -8,3 +8,7 @@ env/
 
 .idea/
 .DS_Store
+
+# 大文件/数据集不上传
+flower_cnn/data/
+flower_cnn/src/best_model.pth

@@ -9,6 +9,9 @@ env/
 .idea/
 .DS_Store
 
-# 大文件/数据集不上传
-flower_cnn/data/
+# 大文件不上传
 flower_cnn/src/best_model.pth
+
+# 保留 data 空目录结构，但忽略其下所有内容
+flower_cnn/data/*
+!flower_cnn/data/.gitkeep

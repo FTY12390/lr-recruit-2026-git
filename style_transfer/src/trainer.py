@@ -7,7 +7,7 @@ from .utils import unnormalize
 
 class StyleTransferTrainer:
     def __init__(self,model,content_img,style_img,device='cuda',
-                 content_weight=1.0,style_weight=1e6,tv_weight=1e-6,lr=0.01):
+                 content_weight=1.0,style_weight=8e5,tv_weight=1e-6,lr=0.01):
         self.model=model
         self.content_img=content_img
         self.style_img=style_img
@@ -24,7 +24,7 @@ class StyleTransferTrainer:
 
         self.optimizer=optim.Adam([self.target_img],lr=lr)
 
-    def train(self,steps=500,print_every=50,save_dir='data/outputs'):
+    def train(self,steps=1000,print_every=50,save_dir='data/outputs'):
         print(f"开始训练，总步数：{steps}")
         os.makedirs(save_dir,exist_ok=True)
 

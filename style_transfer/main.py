@@ -22,12 +22,12 @@ def main():
         style_img=style_img,
         device=device,
         content_weight=1.0,
-        style_weight=1e6,
+        style_weight=3e5,
         tv_weight=1e-6,
-        lr=0.01
+        lr=0.005
     )
 
-    trainer.train(steps=500,print_every=50)
+    trainer.train(steps=800,print_every=100)
 
 if __name__=='__main__':
     main()
